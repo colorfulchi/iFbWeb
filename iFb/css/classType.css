@@ -1,0 +1,42 @@
+﻿/*區塊左*/
+.divL {
+    width: 48%;
+    float: left;
+    border-radius: 5pt;
+}
+/*區塊右*/
+.divR {
+    border: inset;
+    width: 48%;
+    float: left;
+    border-radius: 5pt;
+}
+/*字型小*/
+.fontS {
+    font-family: "微軟正黑體", "新細明體";
+    font-size: 20px;
+    border-radius: 5pt;
+}
+/*字型中*/
+.fontM {
+    font-family: "微軟正黑體", "新細明體";
+    font-size: 40px;
+    border-radius: 5pt;
+}
+/*字型大*/
+.fontL {
+    font-family: "微軟正黑體", "新細明體";
+    font-size: 60px;
+    border-radius: 5pt;
+}
+/*字型按鈕*/
+.fontBtn {
+    font-family: "微軟正黑體", "新細明體";
+    font-size: 20px;
+    border-radius: 5pt;
+    background-color: white;
+}
+/*行高*/
+.line {
+    line-height: 30px;
+}

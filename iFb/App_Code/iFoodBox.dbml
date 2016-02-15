@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="iFoodBoxDatabase" Class="iFoodBoxDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ifoodboxserver.database.windows.net;Initial Catalog=iFoodBoxDatabase;User ID=systemadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="iFoodBoxDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.companyAccounts" Member="companyAccounts">
+    <Type Name="companyAccounts">
+      <Column Name="accountID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="companyAccount" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="companyPassword" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="companyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userData" Member="userData">
+    <Type Name="userData">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="userDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="userSex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="userAfterFour" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="userPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="iShareEvaluation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="togetherBuyEvaluation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.companyData" Member="companyData">
+    <Type Name="companyData">
+      <Column Name="companyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="companyName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="companyPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="companyAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="companyEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="companyUNumbers" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="companyNote" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.foods" Member="foods">
+    <Type Name="foods">
+      <Column Name="foodID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="foodType" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="foodName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="foodCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="foodDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="foodDeadline" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="foodFreezing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="foodalarmDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="foodPicPath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="iFoodBoxID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iMap" Member="iMap">
+    <Type Name="iMap">
+      <Column Name="iMapID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="iFoodBoxID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="foodBoxCoordinateslat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="foodBoxCoordinateslng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.inventory" Member="inventory">
+    <Type Name="inventory">
+      <Column Name="inventoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inventoryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.inventoryItems" Member="inventoryItems">
+    <Type Name="inventoryItems">
+      <Column Name="itemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="itemName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="itemPrice" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="itemBuyStore" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="itemNote" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="inventoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iShare" Member="iShare">
+    <Type Name="iShare">
+      <Column Name="iShareID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iShareFoodName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="iShareFoodCount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="iShareFoodAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Addresslat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Addresslng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="messageTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="messageTimeOver" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="messageNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iSharecomment" Member="iSharecomment">
+    <Type Name="iSharecomment">
+      <Column Name="iSharecommentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="iShareID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="evaluation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="commentDay" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.joinFoodBox" Member="joinFoodBox">
+    <Type Name="joinFoodBox">
+      <Column Name="iFoodBoxID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.leaflets" Member="leaflets">
+    <Type Name="leaflets">
+      <Column Name="leafletID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="leafletName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="leafletPath" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="leafletNote" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="companyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.myFoodBox" Member="myFoodBox">
+    <Type Name="myFoodBox">
+      <Column Name="iFoodBoxID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iFoodBoxAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sendMessage" Member="sendMessage">
+    <Type Name="sendMessage">
+      <Column Name="sendID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="senduserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="targetuserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="message" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="messageTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sysdiagrams" Member="sysdiagrams">
+    <Type Name="sysdiagrams">
+      <Column Name="name" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="principal_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="diagram_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="definition" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.togetherBuy" Member="togetherBuy">
+    <Type Name="togetherBuy">
+      <Column Name="togetherBuyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="togetherBuyStore" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="togetherBuyFoodName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="togetherBuyFoodCount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="togetherBuyFoodAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="togetherBuyFoodAddresslat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="togetherBuyFoodAddresslng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="messageTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="messageTimeOver" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="messageNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.togetherBuycomment" Member="togetherBuycomment">
+    <Type Name="togetherBuycomment">
+      <Column Name="togetherBuycommentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="togetherBuyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="evaluation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="commentDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userAccounts" Member="userAccounts">
+    <Type Name="userAccounts">
+      <Column Name="accountID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userAccount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="userPassword" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

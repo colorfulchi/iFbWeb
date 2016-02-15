@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageJustTopHeader.master.cs" Inherits="MasterPageJustTopHeader" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+       <title>IFoodBox 我的雲端冰箱</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="css/indexstyle.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" >
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+	
+		<!----webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+		<!---//webfonts--->
+		
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="height:100%;">
+        <div class="container-fluid">
+       <div class="bg2">
+		<!----- start-header---->
+		<div class="container">
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="logo">
+							<a href="index.aspx">IFoodBox</a>
+						</div>
+						<!----start-top-nav---->
+                        <asp:ContentPlaceHolder id="ContentNavigation" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+						
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+        <div class="container">
+			<!----- //End-header---->
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+       </div>
+      </div>
+
+ </div>
+
+    </form>
+    
+</body>
+</html>

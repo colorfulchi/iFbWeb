@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 14.875" name="iFoodBox">
+  <DataContextMoniker Name="/iFoodBoxDataContext" />
+  <nestedChildShapes>
+    <classShape Id="60c7dddc-b815-4eac-a1b5-9c7bed6ef3fd" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/iFoodBoxDataContext/companyAccounts" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc52ff6d-48bb-4d8f-9a47-91195c8abf84" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="38d9f22b-76f8-48f5-a07c-5e8c9540c7e9" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/iFoodBoxDataContext/userData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d8e6984-7312-417d-a084-f6f9b7e0834f" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b8ee6f5-71c0-4164-9395-e3d40ae014ac" absoluteBounds="0.75, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/iFoodBoxDataContext/companyData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6e2a58e-9ebc-4358-a8a3-ec45cddc0102" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11024839-85a9-4f66-8dda-908b9f503574" absoluteBounds="3.75, 4.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/iFoodBoxDataContext/foods" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eeacac90-c0e8-464e-91e9-40c0e10e4bc3" absoluteBounds="3.765, 5.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98fb6085-b47f-4994-a9a5-eecb87c0e048" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/iFoodBoxDataContext/iMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab08ab4e-2b2a-466f-82f6-b3cd42263b75" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41e01ace-6e86-43db-9411-706cb947d944" absoluteBounds="6.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/iFoodBoxDataContext/inventory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db410c31-8af0-45c0-a727-b74273157f25" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5de5319f-7d05-40c5-9c8a-d1123aa6863c" absoluteBounds="6.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/iFoodBoxDataContext/inventoryItems" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6776bf9-ea5d-4409-9ec3-6af1fdffec27" absoluteBounds="6.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f365af6c-8e89-4f89-b9c6-b7896a9538fd" absoluteBounds="0.75, 8.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/iFoodBoxDataContext/iShare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b98b6df3-df72-4d86-b5cc-bfbf1f2fe73f" absoluteBounds="0.765, 9.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6844a974-4683-40f7-84af-9c11535f12e9" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/iFoodBoxDataContext/iSharecomment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="462af669-3c31-4e42-bdd6-b91b39530ca2" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90ce7611-b51a-427b-85e6-1fad8f419b50" absoluteBounds="9.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/iFoodBoxDataContext/joinFoodBox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0718fb9f-e633-470d-a7c0-c24d40326f52" absoluteBounds="9.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="935d978b-7573-49ba-bb97-a83a98e7293c" absoluteBounds="3.75, 9.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/iFoodBoxDataContext/leaflets" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db399ef7-345e-4411-8d5a-a0a32082fafd" absoluteBounds="3.765, 10.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd8a8b62-981e-4f2e-96f9-4564da102c53" absoluteBounds="9.75, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/iFoodBoxDataContext/myFoodBox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="285f028f-c617-47c5-81e1-e78bfb73b8ba" absoluteBounds="9.765, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46348d5a-76f4-4177-8366-50df46eace0b" absoluteBounds="6.75, 9.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/iFoodBoxDataContext/sendMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8d86f76-7caa-4479-9bba-fdc22c574c55" absoluteBounds="6.765, 10.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="119ce6e2-5386-4c17-99ce-e82a5eec5185" absoluteBounds="9.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/iFoodBoxDataContext/sysdiagrams" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4687c11f-7c18-4575-bb85-87fa5978e649" absoluteBounds="9.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5efa9a27-a598-4f04-b507-994ac7410bbe" absoluteBounds="9.75, 11.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/iFoodBoxDataContext/togetherBuy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a276ab6-0145-4e9d-8f28-6fca429501d7" absoluteBounds="9.765, 12.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90181b8f-fcaa-43ac-a935-ffa07d4b1663" absoluteBounds="12.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/iFoodBoxDataContext/togetherBuycomment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0effb9ea-d12f-4b19-8f0c-048a264dc221" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19d8b0bf-4da3-44b4-a53a-f3fa2e31be2a" absoluteBounds="0.75, 12.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/iFoodBoxDataContext/userAccounts" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea92e243-5a89-4287-bed3-cf2df9feaf76" absoluteBounds="0.765, 13.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
