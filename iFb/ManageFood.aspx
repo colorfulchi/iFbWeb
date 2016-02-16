@@ -78,20 +78,52 @@
       </div>                          
     </div>
   </div>
-
    
     <div class="row col-md-12">
         <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="iFoodBoxDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="foods">
         </asp:LinqDataSource>
-        <asp:GridView ID="gvfoodlist" runat="server" AutoGenerateColumns="False" BackColor="White" BorderStyle="Solid" BorderWidth="2px" CellPadding="4"  GridLines="Horizontal" CssClass="table table-striped custab">
+        <asp:GridView ID="gvfoodlist" runat="server" AutoGenerateColumns="False" BackColor="White" BorderStyle="Solid" BorderWidth="2px" CellPadding="4"  GridLines="Horizontal" CssClass="table table-striped custab" OnRowDataBound="gvfoodlist_RowDataBound" ShowHeaderWhenEmpty="True" HorizontalAlign="Center">
             <Columns>
-                <asp:BoundField DataField="foodName" HeaderText="名稱" SortExpression="foodName" />
-                <asp:BoundField DataField="foodType" HeaderText="類別" SortExpression="foodType" />
-                <asp:BoundField DataField="foodCount" HeaderText="數量" SortExpression="foodCount" />
-                <asp:BoundField DataField="foodFreezing" HeaderText="位置" SortExpression="foodFreezing" />
-                <asp:BoundField DataField="foodalarmDay" HeaderText="提醒" SortExpression="foodalarmDay" />
-                <asp:BoundField DataField="foodDate" HeaderText="冰入日" SortExpression="foodDate" />
-                <asp:BoundField DataField="foodDeadline" HeaderText="到期日" SortExpression="foodDeadline" />
+                <asp:BoundField DataField="foodName" HeaderText="名稱" SortExpression="foodName" >
+                <HeaderStyle HorizontalAlign="Center" />
+                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="10%" />
+                </asp:BoundField>
+                <asp:BoundField DataField="foodType" HeaderText="類別" SortExpression="foodType" >
+                <HeaderStyle HorizontalAlign="Center" />
+                <ItemStyle HorizontalAlign="Center" Width="10%" />
+                </asp:BoundField>
+                <asp:BoundField DataField="foodCount" HeaderText="數量" SortExpression="foodCount" >
+          
+                <HeaderStyle HorizontalAlign="Center" />
+                <ItemStyle HorizontalAlign="Center" Width="10%" />
+                </asp:BoundField>
+
+                <asp:TemplateField HeaderText="位置" SortExpression="foodFreezing">
+                    <EditItemTemplate>
+                        <asp:CheckBox ID="CheckBox1" runat="server" Checked='<%# Bind("foodFreezing") %>' />
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="txtFoodFreezing" runat="server" Text='<%# Eval("foodFreezing") %>'></asp:Label>
+                    </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" />
+                    <ItemStyle Width="10%" HorizontalAlign="Center" />
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="冰入日" SortExpression="foodDate">                 
+                    <ItemTemplate>
+                        <asp:Label ID="foodDate" runat="server" Text='<%# Bind("foodDate","{0:yyyy/MM/dd}") %>'></asp:Label>
+                    </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" />
+                    <ItemStyle Width="15%" HorizontalAlign="Center" />
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="到期日" SortExpression="foodDate">                 
+                    <ItemTemplate>
+                        <asp:Label ID="foodDeadline" runat="server" Text='<%# Bind("foodDeadline","{0:yyyy/MM/dd}") %>'></asp:Label>
+                    </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" />
+                    <ItemStyle Width="15%" HorizontalAlign="Center" />
+                </asp:TemplateField>
 
                 <asp:TemplateField>
                     <ItemTemplate>
@@ -99,13 +131,14 @@
                          <asp:LinkButton runat="server" Text="<span class='glyphicon glyphicon-remove'></span> 吃完" CssClass="btn btn-danger btn-xs" /> 
                         <asp:LinkButton runat="server" Text="<span class='glyphicon glyphicon-plus'></span> 加入購物車" CssClass="btn btn-success btn-xs" />     
                     </ItemTemplate>
+                    <ItemStyle HorizontalAlign="Center" Width="25%" />
                 </asp:TemplateField>
 
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#333333" />
             <HeaderStyle BackColor="White" Font-Bold="True" ForeColor="#333333" HorizontalAlign="Center" VerticalAlign="Middle" />
             <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="White" ForeColor="#333333" />
+            <RowStyle BackColor="White" ForeColor="#333333" HorizontalAlign="Center" />
             <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
             <SortedAscendingCellStyle BackColor="#F7F7F7" />
             <SortedAscendingHeaderStyle BackColor="#487575" />
